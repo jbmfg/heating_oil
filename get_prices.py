@@ -1,8 +1,11 @@
+import os
 import requests
 from bs4 import BeautifulSoup
 import sqlite_connector
 
-db = sqlite_connector.sqlite_db("heating_oil.db")
+cwd = os.getcwd()
+db_file = os.path.join(cwd, "heating_oil.db")
+db = sqlite_connector.sqlite_db(db_file)
 
 r = requests.get("https://www.maineoil.com/zone1.asp?type=0")
 soup = BeautifulSoup(r.text)
