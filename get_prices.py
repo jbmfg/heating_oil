@@ -8,7 +8,7 @@ db_file = os.path.join(cwd, "heating_oil.db")
 db = sqlite_connector.sqlite_db(db_file)
 
 r = requests.get("https://www.maineoil.com/zone1.asp?type=0")
-soup = BeautifulSoup(r.text)
+soup = BeautifulSoup(r.text, "html.parser")
 
 table = soup.find_all("table")[0]
 for row in table.find_all("tr"):
