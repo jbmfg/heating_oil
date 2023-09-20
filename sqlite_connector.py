@@ -7,7 +7,7 @@ import sys
 from collections import defaultdict
 import logging
 
-logging.basicConfig(filename='run.log', filemode="a", format='%(asctime)s %(message)s', level=logging.DEBUG)
+logging.basicConfig(filename='sqlite.log', filemode="a", format='%(asctime)s %(message)s', level=logging.DEBUG)
 logger = logging.getLogger(__name__)
 
 CHUNKS = 100000

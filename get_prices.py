@@ -20,6 +20,5 @@ for row in table.find_all("tr"):
             "price_date": date.text,
             "calc": calc.text,
         }]
-        print(insert)
         db.insert_dict_list("prices", insert)
 

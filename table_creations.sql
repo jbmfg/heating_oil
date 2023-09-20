@@ -6,3 +6,4 @@ create table if not exists prices (
     price_date TEXT,
     calc TEXT
     );
+
