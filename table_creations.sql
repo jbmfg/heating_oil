@@ -4,6 +4,7 @@ create table if not exists prices (
     price REAL, 
     phone TEXT,
     price_date TEXT,
-    calc TEXT
+    calc TEXT,
+    current_price INT
     );
 
